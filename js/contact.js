@@ -8,6 +8,10 @@ $(document).ready(function(){
         return this.optional(element) || /^\bcat\b$/.test(value)
     }, "type the correct answer -_-");
 
+    var form = $('#myForm'); // contact form
+    var submit = $('.submit-btn'); // submit button
+    var alert = $('.alert-msg'); // alert div for show alert message
+    
     // validate contactForm form
     $(function() {
         $('#contactForm').validate({
@@ -35,30 +39,35 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
-                    minlength: "your name must consist of at least 2 characters"
+                    required: "⚠️ Vui lòng hãy nhập tên của bạn",
+                    minlength: "⚠️ Tên của bạn phải có ít nhất 2 kí tự"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
-                    minlength: "your subject must consist of at least 4 characters"
+                    required: "⚠️ Vui lòng hãy nhập tiêu đề tin nhắn",
+                    minlength: "⚠️ Tiêu đề phải có ít nhất 4 kí tự"
                 },
                 number: {
-                    required: "come on, you have a number, don't you?",
-                    minlength: "your Number must consist of at least 5 characters"
+                    required: "⚠️ Vui lòng hãy nhập số điện thoại",
+                    minlength: "⚠️ Số điện thoại phải có ít nhất 5 kí tự"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "⚠️ Vui lòng hãy nhập email của bạn"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
+                    required: "⚠️ Vui lòng hãy nhập nội dung tin nhắn",
+                    minlength: "😘 Hãy nói cho chúng tôi nhiều hơn đi..."
                 }
             },
+            
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    url:"/sendMail",
+                    beforeSend: function() {
+                        alert.fadeOut();
+                        submit.html('Sending....'); // change submit button text
+                    },
                     success: function() {
                         $('#contactForm :input').attr('disabled', 'disabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {

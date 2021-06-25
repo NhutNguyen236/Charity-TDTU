@@ -340,6 +340,7 @@ mailChimp();
 		$('.featured-carousel').owlCarousel({
 	    loop:true,
 	    autoplay: true,
+        autoplayTimeout:3000,
 	    margin:30,
 	    animateOut: 'fadeOut',
 	    animateIn: 'fadeIn',

@@ -474,9 +474,9 @@ h3 {
 
 /* line 16, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn:hover {
-  background: #3CC78F;
+  background: #5CC5D6;
   color: #fff !important;
-  border: 1px solid #3CC78F;
+  border: 1px solid #2281B3;
 }
 
 /* line 21, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
@@ -2556,7 +2556,7 @@ h3 {
 
 /* line 15, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_bradcam.scss */
 .bradcam_area.overlay::before {
-  background: #233D70;
+  background: #8188F0;
   opacity: .8;
 }
 
@@ -3002,7 +3002,7 @@ h3 {
   z-index: 12;
   width: 150px;
   height: 150px;
-  background: #3CC78F;
+  background: #5CC5D6;
   text-align: center;
   line-height: 150px;
   -webkit-border-radius: 50%;
@@ -3017,7 +3017,7 @@ h3 {
   top: 0;
   height: 100%;
   width: 100%;
-  background: #3CC78F;
+  background: #5CC5D6;
   opacity: .3;
   content: '';
 }
