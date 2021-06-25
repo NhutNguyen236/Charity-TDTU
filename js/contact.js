@@ -7,10 +7,6 @@ $(document).ready(function(){
     jQuery.validator.addMethod('answercheck', function (value, element) {
         return this.optional(element) || /^\bcat\b$/.test(value)
     }, "type the correct answer -_-");
-
-    var form = $('#myForm'); // contact form
-    var submit = $('.submit-btn'); // submit button
-    var alert = $('.alert-msg'); // alert div for show alert message
     
     // validate contactForm form
     $(function() {
@@ -62,12 +58,6 @@ $(document).ready(function(){
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
-                    data: $(form).serialize(),
-                    url:"/sendMail",
-                    beforeSend: function() {
-                        alert.fadeOut();
-                        submit.html('Sending....'); // change submit button text
-                    },
                     success: function() {
                         $('#contactForm :input').attr('disabled', 'disabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {

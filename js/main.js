@@ -95,7 +95,7 @@ autoplaySpeed: 800,
   // counter 
   $('.counter').counterUp({
     delay: 10,
-    time: 10000
+    time: 900
   });
 
 /* magnificPopup img view */
