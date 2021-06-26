@@ -451,13 +451,13 @@ h3 {
 /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn {
   background: #fff;
-  color: #3CC78F !important;
+  color: #009DFF !important;
   display: inline-block;
   padding: 15px 30px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  border: 1px solid #3CC78F;
+  border: 1px solid #009DFF;
   text-transform: capitalize;
   cursor: pointer;
   -webkit-border-radius: 3px;
