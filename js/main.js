@@ -366,3 +366,23 @@ mailChimp();
 	carousel();
 
 })(jQuery);
+
+// For top carousel
+(function($) {
+
+	var carousel = function() {
+		$('#top-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout:3000,
+            autoplayHoverPause: true,
+            slideSpeed : 500,
+            singleItem:true,
+            items: 1,
+            dots: false,
+		});
+
+	};
+	carousel();
+
+})(jQuery);
