@@ -3,11 +3,12 @@ var express = require('express')
 var bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-handlebars');
-require('dotenv').config()
+var dotenv = require('dotenv')
 
 //=============== APP CONFIG ======================
 var app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
+dotenv.config({ path: __dirname + '/config/.env' });
 
 
 //=============== VIEW CONFIG ======================
