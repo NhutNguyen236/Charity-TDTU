@@ -15089,5 +15089,10 @@ h6 {
     .work:hover .img .icon {
       opacity: 1; }
   
+#owl-demo .item{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
