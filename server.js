@@ -3,7 +3,7 @@ var express = require('express')
 var bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-handlebars');
-
+require('dotenv').config()
 
 //=============== APP CONFIG ======================
 var app = express()
@@ -31,8 +31,8 @@ app.post('/sendMail', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'phamp9331@gmail.com',
-            pass: '@Phongenter212123'
+            user: process.env.EMAIL,
+            pass: process.env.EMAIL_PASSWORD
         }
     });
 
@@ -47,7 +47,7 @@ app.post('/sendMail', (req, res) => {
 
     // Send placeholding email to client
     let mailOptionsClient = {
-        from: 'phamp9331@gmail.com',
+        from: process.env.EMAIL,
         to: messageBody.email,
         subject: '💓 Cảm ơn vì đã giữ liên lạc với chúng tôi 💓',
         template: 'email',
@@ -66,6 +66,9 @@ app.post('/sendMail', (req, res) => {
         msg = 'OK'
         res.send(msg)
     });
+
+    // Send email to admin side
+
 })
 
 //================= SERVER LISTENER ================
