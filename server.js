@@ -69,6 +69,30 @@ app.post('/sendMail', (req, res) => {
     });
 
     // Send email to admin side
+    var mailOptions = {
+        from: process.env.EMAIL,
+        to: 'nhutnguyenf330@gmail.com',
+        subject: 'Customer feedback incoming',
+        template: 'email_admin',
+        context: {
+            subject: messageBody.subject,
+            name: messageBody.name,
+            email: messageBody.email,
+            content: messageBody.content,
+            number: messageBody.number
+        } // send extra values to template
+    };
+    
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+            var message = 'We are facing some technical difficulties here, come back later 😥'
+            res.send(message)
+        } else {
+            var message = 'OK'
+            res.send(message)
+        }
+    });
 
 })
 
