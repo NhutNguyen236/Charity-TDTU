@@ -15097,8 +15097,12 @@ h6 {
 }
 
 /* Donation page */
-body {
+/* body {
     background: #f5f5f5
+} */
+.latest_activites_area_donation{
+    background: rgba(228, 241, 254, 1);
+    position: relative;
 }
 
 .rounded {
