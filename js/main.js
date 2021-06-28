@@ -412,32 +412,34 @@ $('#confirm-payment').click(() => {
 
 
 // Block F12 keystroke
-$(document).keydown(function(event){
-    if(event.keyCode==123){
-        return false;
+$(document).ready(function(){
+    $(document).keydown(function(event){
+        if(event.keyCode==123){
+            return false;
+        }
+        else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
+            return false;
+        }
+    });
+    
+    // Block web inspector
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+    
+    // Block web inspection by other key combinations
+    document.onkeydown = function(e) {
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+           return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+           return false;
+        }
     }
-    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
-        return false;
-    }
-});
-
-// Block web inspector
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-
-// Block web inspection by other key combinations
-document.onkeydown = function(e) {
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-       return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-       return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-       return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-       return false;
-    }
-}
+})
