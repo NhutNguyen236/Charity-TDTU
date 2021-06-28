@@ -387,13 +387,6 @@ mailChimp();
 
 })(jQuery);
 
-$(document).ready(() => {
-    window.setTimeout(function() {
-        $("#notsup-warning").fadeTo(500, 0).slideUp(500, function(){
-            $(this).remove(); 
-        });
-    }, 2000);
-})
 // If user click on Confirm Paymetn for credit card, display Not supported warning
 $('#confirm-payment').click(() => {
     var alert_msg = `
@@ -404,7 +397,7 @@ $('#confirm-payment').click(() => {
             </button>
         </div>
     `
-    $('#credit-card').prepend(alert_msg)
+    $('#warning-place').html(alert_msg)
 
     // Then make alert slideup to disappear
     $('#notsup-warning').ready(() => {
@@ -412,13 +405,13 @@ $('#confirm-payment').click(() => {
             $("#notsup-warning").fadeTo(500, 0).slideUp(500, function(){
                 $(this).remove(); 
             });
-        }, 2000);
+        }, 5000);
     })
     //$('#notsup-warning').attr("style", "display: block;")
 })
 
 
-// Block F12 
+// Block F12 keystroke
 $(document).keydown(function(event){
     if(event.keyCode==123){
         return false;
@@ -428,3 +421,23 @@ $(document).keydown(function(event){
     }
 });
 
+// Block web inspector
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// Block web inspection by other key combinations
+document.onkeydown = function(e) {
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+       return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+       return false;
+    }
+}
