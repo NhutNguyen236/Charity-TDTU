@@ -387,14 +387,43 @@ mailChimp();
 
 })(jQuery);
 
+$(document).ready(() => {
+    window.setTimeout(function() {
+        $("#notsup-warning").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove(); 
+        });
+    }, 2000);
+})
+// If user click on Confirm Paymetn for credit card, display Not supported warning
+$('#confirm-payment').click(() => {
+    var alert_msg = `
+        <div id="notsup-warning" class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Coming soon!</strong> Hiện chúng tôi tạm thời chưa hỗ trợ tính năng này
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    `
+    $('#credit-card').prepend(alert_msg)
+
+    // Then make alert slideup to disappear
+    $('#notsup-warning').ready(() => {
+        window.setTimeout(function() {
+            $("#notsup-warning").fadeTo(500, 0).slideUp(500, function(){
+                $(this).remove(); 
+            });
+        }, 2000);
+    })
+    //$('#notsup-warning').attr("style", "display: block;")
+})
 
 
-// // Block F12 
-// $(document).keydown(function(event){
-//     if(event.keyCode==123){
-//         return false;
-//     }
-//     else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
-//         return false;
-//     }
-// });
+// Block F12 
+$(document).keydown(function(event){
+    if(event.keyCode==123){
+        return false;
+    }
+    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
+        return false;
+    }
+});
