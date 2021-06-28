@@ -412,7 +412,7 @@ $('#confirm-payment').click(() => {
 
 
 // Block F12 keystroke
-$(document).ready(function(){
+var blocker = function(){
     $(document).keydown(function(event){
         if(event.keyCode==123){
             return false;
@@ -442,4 +442,11 @@ $(document).ready(function(){
            return false;
         }
     }
+}
+$(document).ready(function(){
+    blocker()
+})
+
+$(document).on(function(){
+    blocker()
 })
