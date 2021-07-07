@@ -431,7 +431,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/2.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a href="#" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -444,7 +444,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/1.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a href="https://www.facebook.com/dieu.nhi.773/" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -457,7 +457,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/4.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100046905934606" class="icon d-flex align-items-center justify-content-center">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -470,7 +470,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/5.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a href="https://www.facebook.com/que.hong.1048" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -483,7 +483,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/6.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a href="#" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -496,7 +496,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/7.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a href="https://www.facebook.com/thaosuong.tran.142" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -509,7 +509,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/8.jpg);">
-                                <a href="#" class="icon d-flex align-items-center justify-content-center">
+                                <a href="#" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -522,7 +522,7 @@
                     <div class="item">
                         <div class="work">
                             <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(./img/volenteer/3.png);">
-                                <a href="https://www.facebook.com/Nhut.Nguyenofficial2775/" class="icon d-flex align-items-center justify-content-center">
+                                <a href="https://www.facebook.com/Nhut.Nguyenofficial2775/" class="icon d-flex align-items-center justify-content-center" target="_blank">
                                     <span class="fa fa-facebook" style="font-size: 250%;"></span>
                                 </a>
                             </div>
@@ -601,6 +601,34 @@
         </div>
     </div>
 
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "112449041082666");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <!-- footer_start  -->
     <footer class="footer">
         <div class="footer_top">

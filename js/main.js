@@ -421,6 +421,15 @@ var blocker = function(){
             return false;
         }
     });
+
+    $(window).keydown(function(event){
+        if(event.keyCode==123){
+            return false;
+        }
+        else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
+            return false;
+        }
+    });
     
     // Block web inspector
     document.addEventListener('contextmenu', function(e) {
@@ -443,10 +452,11 @@ var blocker = function(){
         }
     }
 }
+
 $(document).ready(function(){
     blocker()
 })
 
-$(document).on(function(){
+$(window).ready(function(){
     blocker()
 })
