@@ -75,7 +75,7 @@ particlesJS("particles-js", {
     size: {
       anim: { enable: false, minimumValue: 8, speed: 20, sync: false },
       random: false,
-      value: 32
+      value: 18
     }
   },
   polygon: {
