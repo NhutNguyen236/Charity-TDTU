@@ -10,6 +10,7 @@
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <script src="/js/zalopay.js?ver=1494921725335" type="text/javascript"></script>
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -150,19 +151,19 @@
                                     <div id="warning-place"></div>
                                     <form role="form" onsubmit="event.preventDefault()">
                                         <div class="form-group"> <label for="username">
-                                                <h6>Card Owner</h6>
-                                            </label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-control "> </div>
+                                                <h6>Tên chủ thẻ</h6>
+                                            </label> <input type="text" name="username" placeholder="Nhập tên chủ thẻ" required class="form-control "> </div>
                                         <div class="form-group"> <label for="cardNumber">
-                                                <h6>Card number</h6>
+                                                <h6>Số thẻ</h6>
                                             </label>
-                                            <div class="input-group"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control " required>
+                                            <div class="input-group"> <input type="text" name="cardNumber" placeholder="Nhập số thẻ hợp lệ" class="form-control " required>
                                                 <div class="input-group-append"> <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span> </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-sm-8">
                                                 <div class="form-group"> <label><span class="hidden-xs">
-                                                            <h6>Expiration Date</h6>
+                                                            <h6>Ngày hết hạn</h6>
                                                         </span></label>
                                                     <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> </div>
                                                 </div>
@@ -182,31 +183,48 @@
                             <div id="bank-transfer" class="tab-pane fade pt-3">
                                 <div class="form-group "> <label for="Select Your Bank">
                                     <h6>Hãy chọn 1 ngân hàng bạn muốn chuyển</h6>
-                                    </label> <select class="form-control" id="ccmonth" required>
+                                    </label><select class="form-control" id="bank-selector" required>
                                         <option value="" selected disabled>Vui lòng chọn ngân hàng</option>
-                                        <option>Vietcombank</option>
-                                        <option>Agribank</option>
-                                        <option>Techcombank</option>
-                                        <option>BIDV</option>
-                                        <option>ACB</option>
+                                        <option value="vcbank">Vietcombank</option>
+                                        <!-- <option value="vcbank">Agribank</option>
+                                        <option value="vcbank">Techcombank</option>
+                                        <option value="vcbank">BIDV</option> -->
+                                        <option value="acb">ACB</option>
                                     </select> </div>
                                 <div class="form-group">
                                     <p> <button type="submit" class="btn btn-primary "><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
                                 </div>
-                                <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                                
+                                <div id="bank-detail" style="display: none;">
+                                    <div id="acb" class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2" style="display: none;">
+                                        <p class="text-muted">Vui lòng hãy quyên góp qua tài khoản ngân hàng như sau, xin cảm ơn.</p>
+                                        <h6>NGÂN HÀNG: <strong>ACB</strong></h5>
+                                        <h6>SỐ TÀI KHOẢN: <strong>3203817</strong></h5>
+                                        <h6>TÊN TÀI KHOẢN: <strong>Nguyễn Diệu Yến Nhi.</strong></h5>
+                                    </div>
+
+                                    <div id="vcbank" class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2" style="display: none;">
+                                        <p class="text-muted">Vui lòng hãy quyên góp qua tài khoản ngân hàng như sau, xin cảm ơn.</p>
+                                        <h6>NGÂN HÀNG: <strong>Vietcombank</strong></h5>
+                                        <h6>SỐ TÀI KHOẢN: <strong>3203817</strong></h5>
+                                        <h6>TÊN TÀI KHOẢN: <strong>Nguyễn Kiều Ngân</strong></h5>
+                                        </p>
+                                    </div>
+                                </div>
+                                
                             </div> <!-- End -->
 
                             <!-- net banking infor -->
                             <div id="net-banking" class="tab-pane fade pt-3">
                                 <div class="form-group ">
-                                    <h6 style="margin-left: auto; margin-right: auto;">Hãy chọn 1 hình thức thanh toán sau đây</h6>
+                                    <h6 style="text-align: center;">Hãy chọn 1 hình thức thanh toán sau đây</h6>
                                     <!-- Internet banking multiple choices -->
                                     <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
                                         <!-- Credit card form tabs -->
                                         <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
                                             <li class="nav-item"> <a data-toggle="pill" href="" class="nav-link"><img src="https://static.mservice.io/img/logo-momo.png" alt="momo-pay" width="60" height="55"></a> </li>
                                             <!-- <li class="nav-item"> <a data-toggle="pill" href="#paypal" class="nav-link "> <i class="fab fa-paypal mr-2"></i> Paypal </a> </li> -->
-                                            <li class="nav-item"> <a data-toggle="pill" href="" class="nav-link "><img src="./img/payment/zalopay.png" alt="zalo-pay" width="150" height="55"></a> </li>
+                                            <li class="nav-item"> <a data-toggle="pill" href="" class="nav-link "><img src="./img/payment/zalopay.png" alt="zalo-pay" width="95" height="55"></a> </li>
                                             <li class="nav-item"> <a data-toggle="pill" href="" class="nav-link "><img src="./img/payment/viettelpay.png" alt=""  width="100" height="55"></a> </li>
                                         </ul>
                                     </div> <!-- End -->
@@ -415,6 +433,9 @@
     <!-- For particles.js import -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="./js/particles_app.js"></script>
+
+    <!-- ZaloPay API call -->
+    <script src="/js/zalopay_config.js"></script>
 </body>
 
 </html>
