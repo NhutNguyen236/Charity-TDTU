@@ -14,10 +14,17 @@ dotenv.config({ path: __dirname + '/config/.env' });
 //=============== VIEW CONFIG ======================
 app.use(express.static(__dirname));
 
-
 //============== MIDDLEWARES CONFIG ================
 app.get('/', (req, res) => {
+    res.redirect('/index')
+})
+
+app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/index.html')
+})
+
+app.get('/donation', (req, res) => {
+    res.sendFile(__dirname + '/donation.html')
 })
 
 app.post('/sendMail', (req, res) => {

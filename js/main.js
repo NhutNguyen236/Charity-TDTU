@@ -474,3 +474,86 @@ dropDown.onchange = function(){
     }    
 	document.getElementById(this.value).style.display = "block";
 }
+
+//============================ Pop up window fade out effect in donation page ============= //
+$('#open-link').click(function(){
+    $("#ex1").modal({
+        fadeDuration: 1000,
+        fadeDelay: 0.1
+    });
+})
+
+// ========================== pop up for each net-banking method =========================//
+// MOMO payment moodal
+new jBox('Modal', {
+    attach: '#momo-pay',
+    height: 400,
+	animation: 'zoomIn',
+	draggable: 'title',
+	blockScroll: true,
+    title: `<p style="text-align: center;">Quyên góp qua <img src="https://bit.ly/3k9Q2gb" alt="momo" style="max-width: 10%;"></p>`,
+    content:
+      `	<div style="text-align: center;">
+	  	<p>Tên tài khoản MOMO: <strong>NGUYEN MINH NHUT</strong></p>
+	  	<p>Số tài khoản MOMO: <strong>091029102192</strong></p>
+	  	<p>Hoặc quét mã QR sau:</p>
+	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 30%;">
+  		</div>
+
+		<div style="text-align: center; margin-top: 10px;">
+			<p>Các hình thức khác</p>
+		</div>
+
+  	`,
+	
+});
+
+//ZaloPay
+new jBox('Modal', {
+    attach: '#zalo-pay',
+    height: 400,
+	animation: 'zoomIn',
+	draggable: 'title',
+	blockScroll: true,
+    title: `<p style="text-align: center;">Quyên góp qua <br>
+			<img src="https://bit.ly/3wrZAFS" alt="zalo" style="max-width: 20%;">
+			</p>`,
+    content:
+      `	<div style="text-align: center;">
+	  	<p>Tên tài khoản ZaloPay: <strong>NGUYEN MINH NHUT</strong></p>
+	  	<p>Số tài khoản ZaloPay: <strong>091029102192</strong></p>
+	  	<p>Hoặc quét mã QR sau:</p>
+	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 50%;">
+  		</div>
+
+		<div style="text-align: center; margin-top: 10px;">
+			<p>Các hình thức khác</p>
+		</div>
+
+  	`,
+	
+});
+
+// ViettelPay
+new jBox('Modal', {
+    attach: '#viet-pay',
+    height: 400,
+	animation: 'zoomIn',
+	draggable: 'title',
+	blockScroll: true,
+    title: `<p style="text-align: center;">Quyên góp qua <img src="https://bit.ly/3xx1F4Q" alt="viettel" style="max-width: 10%;"></p>`,
+    content:
+      `	<div style="text-align: center;">
+	  	<p>Tên tài khoản ViettelPay: <strong>NGUYEN MINH NHUT</strong></p>
+	  	<p>Số tài khoản ViettelPay: <strong>091029102192</strong></p>
+	  	<p>Hoặc quét mã QR sau:</p>
+	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 30%;">
+  		</div>
+
+		<div style="text-align: center; margin-top: 10px;">
+			<p>Các hình thức khác</p>
+		</div>
+
+  	`,
+	
+});
