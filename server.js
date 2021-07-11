@@ -15,6 +15,7 @@ dotenv.config({ path: __dirname + '/config/.env' });
 app.use(express.static(__dirname));
 
 //============== MIDDLEWARES CONFIG ================
+// Index page
 app.get('/', (req, res) => {
     res.redirect('/index')
 })
@@ -23,8 +24,19 @@ app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
+// Contact page
+app.get('/contact', (req, res) => {
+    res.sendFile(__dirname + '/contact.html')
+})
+
+// Donation page 
 app.get('/donation', (req, res) => {
     res.sendFile(__dirname + '/donation.html')
+})
+
+//About page
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/About.html')
 })
 
 app.post('/sendMail', (req, res) => {
@@ -101,6 +113,13 @@ app.post('/sendMail', (req, res) => {
         }
     });
 
+})
+
+// ================ 404 not found handle ===========//
+app.use('/:route', (req, res) =>{
+    var route = req.params.route
+
+    res.sendFile(__dirname + '/404.html')
 })
 
 //================= SERVER LISTENER ================

@@ -513,11 +513,15 @@ new jBox('Modal', {
 	blockScroll: true,
     title: `<p style="text-align: center;">Quyên góp qua <br>
 			<img src="https://bit.ly/3wrZAFS" alt="zalo" style="max-width: 20%;">
-			</p>`,
+			</p>
+			<div class="alert alert-danger" role="alert">
+				Đang trong quá trình cập nhật thông tin, vui lòng sử dụng MOMO
+			</div>
+			`,
     content:
       `	<div style="text-align: center;">
-	  	<p>Tên tài khoản ZaloPay: <strong>NGUYEN MINH NHUT</strong></p>
-	  	<p>Số tài khoản ZaloPay: <strong>091029102192</strong></p>
+	  	<p>Tên tài khoản ZaloPay: <strong>xxxxx</strong></p>
+	  	<p>Số tài khoản ZaloPay: <strong>xxxxxx</strong></p>
 	  	<p>Hoặc quét mã QR sau:</p>
 	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 50%;">
   		</div>
@@ -533,11 +537,15 @@ new jBox('Modal', {
 	animation: 'zoomIn',
 	draggable: 'title',
 	blockScroll: true,
-    title: `<p style="text-align: center;">Quyên góp qua <img src="https://bit.ly/3xx1F4Q" alt="viettel" style="max-width: 10%;"></p>`,
+    title: `<p style="text-align: center;">Quyên góp qua <img src="https://bit.ly/3xx1F4Q" alt="viettel" style="max-width: 10%;"></p>
+			<div class="alert alert-danger" role="alert">
+				Đang trong quá trình cập nhật thông tin, vui lòng sử dụng MOMO
+			</div>
+	`,
     content:
       `	<div style="text-align: center;">
-	  	<p>Tên tài khoản ViettelPay: <strong>NGUYEN MINH NHUT</strong></p>
-	  	<p>Số tài khoản ViettelPay: <strong>091029102192</strong></p>
+	  	<p>Tên tài khoản ViettelPay: <strong>xxxxx</strong></p>
+	  	<p>Số tài khoản ViettelPay: <strong>Xxxxx</strong></p>
 	  	<p>Hoặc quét mã QR sau:</p>
 	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 30%;">
   		</div>
