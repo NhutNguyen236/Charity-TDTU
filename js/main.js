@@ -494,15 +494,11 @@ new jBox('Modal', {
     title: `<p style="text-align: center;">Quyên góp qua <img src="https://bit.ly/3k9Q2gb" alt="momo" style="max-width: 10%;"></p>`,
     content:
       `	<div style="text-align: center;">
-	  	<p>Tên tài khoản MOMO: <strong>NGUYEN MINH NHUT</strong></p>
-	  	<p>Số tài khoản MOMO: <strong>091029102192</strong></p>
+	  	<p>Tên tài khoản MOMO: <strong>NGUYỄN MINH NHỰT</strong></p>
+	  	<p>Số tài khoản MOMO: <strong>0964530825</strong></p>
 	  	<p>Hoặc quét mã QR sau:</p>
-	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 30%;">
+	  	<img src="https://i.ibb.co/7QfC5qQ/image.png" alt="" style="max-width: 50%;">
   		</div>
-
-		<div style="text-align: center; margin-top: 10px;">
-			<p>Các hình thức khác</p>
-		</div>
 
   	`,
 	
@@ -526,10 +522,6 @@ new jBox('Modal', {
 	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 50%;">
   		</div>
 
-		<div style="text-align: center; margin-top: 10px;">
-			<p>Các hình thức khác</p>
-		</div>
-
   	`,
 	
 });
@@ -549,10 +541,6 @@ new jBox('Modal', {
 	  	<p>Hoặc quét mã QR sau:</p>
 	  	<img src="https://bit.ly/3e7KEX7" alt="" style="max-width: 30%;">
   		</div>
-
-		<div style="text-align: center; margin-top: 10px;">
-			<p>Các hình thức khác</p>
-		</div>
 
   	`,
 	
