@@ -487,22 +487,30 @@ $('#open-link').click(function(){
 // MOMO payment moodal
 new jBox('Modal', {
     attach: '#momo-pay',
-    height: 400,
+    height: 500,
+    width: 500,
 	animation: 'zoomIn',
 	draggable: 'title',
 	blockScroll: true,
     title: `<p style="text-align: center;">Quyên góp qua <img src="https://bit.ly/3k9Q2gb" alt="momo" style="max-width: 10%;"></p>`,
     content:
       `	<div style="text-align: center;">
-	  	<p>Tên tài khoản MOMO: <strong>NGUYỄN MINH NHỰT</strong></p>
-	  	<p>Số tài khoản MOMO: <strong>0964530825</strong></p>
+	  	<p>Tên tài khoản MOMO: <strong>NGUYỄN DIỆU YẾN NHI</strong></p>
+	  	<p>Số tài khoản MOMO: <strong>0382297432</strong></p>
+        <p id="momo_link">Hoặc truy cập link sau: <button type="button" class="btn btn-primary" id="get_momo">Nhấn dể get link</button></p>
 	  	<p>Hoặc quét mã QR sau:</p>
-	  	<img src="https://i.ibb.co/7QfC5qQ/image.png" alt="" style="max-width: 50%;">
+	  	<img src="https://i.ibb.co/LkQw6tY/image.png" alt="" style="max-width: 50%;">
   		</div>
 
   	`,
 	
 });
+
+// get link button to show link
+$(document).on("click", "#get_momo", function(){
+    $('#get_momo').remove()
+    $('#momo_link').html('<a href="https://nhantien.momo.vn/nJAVMbvuT2v" target="blank">https://nhantien.momo.vn/nJAVMbvuT2v</a>')
+})
 
 //ZaloPay
 new jBox('Modal', {
